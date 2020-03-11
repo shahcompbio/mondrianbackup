@@ -469,8 +469,6 @@ def get_singlecell_pipeline_config(config_params, override=None):
     if not reference_dir:
         reference_dir = config_reference.get_reference_dir(cluster)
 
-    raise Exception(version)
-
     params = {}
 
     params.update(
