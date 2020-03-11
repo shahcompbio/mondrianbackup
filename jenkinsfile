@@ -60,11 +60,11 @@ pipeline{
            //        sh 'bash tests/jenkins/infer_haps/infer_haps.sh singlecelltestsets $SINGLECELLTESTSETS singlecellpipelinetest'
            //     }
            // }
-//            stage('count_haps'){
-//                steps{
-//                  sh 'bash tests/jenkins/count_haps/count_haps.sh singlecelltestsets $SINGLECELLTESTSETS singlecellpipelinetest'
-//               }
-//           }
+            stage('count_haps'){
+                steps{
+                  sh 'bash tests/jenkins/count_haps/count_haps.sh singlecelltestsets $SINGLECELLTESTSETS singlecellpipelinetest'
+               }
+           }
          }
       }
     }
