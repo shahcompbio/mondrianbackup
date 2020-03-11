@@ -3,8 +3,9 @@ import os
 from single_cell.utils import helpers
 
 
-def containers():
-    version = helpers.get_version()
+def containers(version=None):
+    if not version:
+        version = helpers.get_version()
 
     docker_images = {
         'bwa': 'bwa:v0.0.2',
