@@ -9,6 +9,7 @@ from single_cell.utils import csvutils
 import pysam
 import os
 import pandas as pd
+import logging
 
 # class Comparer():
 #     def __init__(self, func, ref, to_compare):
@@ -138,7 +139,9 @@ def compare_count_haps(haps, refhaps):
     haps = pd.read_csv(haps, sep="\t")
     refhaps = pd.read_csv(refhaps, sep="\t")
 
-    assert not haps.empty
+    if haps.empty and refhaps.empty:
+        logging.getLogger('testing').warning("comparing empty hap counts")
+        return
 
     cols_must_match = ["chromosome", "position", "allele", "allele_id", "hap_label"]
 
