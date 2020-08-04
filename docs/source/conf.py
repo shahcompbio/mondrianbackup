@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'WGS'
-copyright = u'2019, Diljot and Doug'
-author = u'Diljot and Doug'
+project = u'Mondrian'
+copyright = u'2019, Diljot and Douglas'
+author = u'Diljot and Douglas'
 
 # The short X.Y version
 version = u''
@@ -41,6 +41,7 @@ release = u'v0.0.2'
 extensions = [
     'sphinx.ext.autodoc',
     'recommonmark',
+    'sphinx_markdown_tables',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -103,7 +104,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'WGSdoc'
+htmlhelp_basename = 'Mondriandoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -130,7 +131,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'WGS.tex', u'WGS Documentation',
+    (master_doc, 'Mondrian.tex', u'Mondrian Documentation',
      u'Diljot and Doug', 'manual'),
 ]
 
@@ -140,7 +141,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'wgs', u'WGS Documentation',
+    (master_doc, 'mondrian', u'Mondrian Documentation',
      [author], 1)
 ]
 
@@ -151,8 +152,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'WGS', u'WGS Documentation',
-     author, 'WGS', 'One line description of project.',
+    (master_doc, 'Modrian', u'Modrian Documentation',
+     author, 'Modrian', 'One line description of project.',
      'Miscellaneous'),
 ]
 

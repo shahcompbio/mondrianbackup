@@ -1,23 +1,5 @@
-# Mondrian
+## Running Mondrian with test datasets
 
-Welcome to the home page for Mondrian documentation.
-
-
-Mondrian is a package for the analysis of scWGS data. Containing over 10 subpipelines from basic alignment to copy number inference, Mondrian provides an simple API for scWGS analysis. In these docs, you will find everything you need to install and run Mondrian. 
-
-#### Contents: 
-- [Overall description](description.md)
-    - [Description of cell quality classifier](description/cell_quality_classifier.md)
-    - [Description of metrics](description/metrics.md)
-    - [Description of organism filter](description/organism_filter.md)
-- [Conda Setup](setup_guide_conda.md)
-
-________________
-<!-- 
-
-## Quick Setup
-The Mondrian package is composed of 10 subpipelines that can be run individually. Here you will find everything you need to run any of the subpipelines with small testdata and expected outputs. -->
-<!-- 
 ### Reference Data
 Before you can run a subpipeline you must acquire the necessary reference data. If you are working from the `juno` cluster, 
 reference data can be found at `/juno/work/shah/reference/singlecellpipeline`. If you are not working from juno, 
@@ -114,4 +96,4 @@ To launch the pipeline.
 
 Each downloadable `tar` files contains expected output from each pipeline in a directory labeled `expected_outputs`. You can use this to verify your local setup by comparing it with the result of your current pipeline run. Results from the current run can be found in a directory labeled `output`. 
 
- -->
+
