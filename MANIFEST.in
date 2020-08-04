@@ -1,2 +1,2 @@
 include versioneer.py
-include single_cell/_version.py
+include mondrian/_version.py

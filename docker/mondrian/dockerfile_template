@@ -1,5 +1,5 @@
 # build on top of out base image
-FROM singlecellpipeline/python_singlecell_qc:v0.1.2
+FROM mondrianscdna/python_singlecell_qc:v0.1.2
 
 # Copy the current directory contents into the container at /app
 ADD . /app
@@ -7,13 +7,13 @@ ADD . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install -e git+https://github.com/shahcompbio/pypeliner.git@v0.5.19#egg=pypeliner
 RUN pip install -e git+https://github.com/shahcompbio/biowrappers.git@v0.2.8#egg=biowrappers
-RUN pip install -e git+https://github.com/shahcompbio/single_cell_pipeline.git@{git_commit}#egg=single-cell-pipeline
+RUN pip install -e git+https://github.com/shahcompbio/mondrian.git@{git_commit}#egg=mondrian
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
 
 # Define environment variable
-ENV NAME scpipeline
+ENV NAME mondrian
 
 # Run app.py when the container launches
 CMD ["python"]

@@ -3,21 +3,21 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - bash single_cell/tests/jenkins/preflight/preflight.sh
-      - bash single_cell/tests/jenkins/build_docker_master/build.sh $DOCKERHUB_USR $DOCKERHUB_PSW docker.io singlecellpipelinetest
+      - bash mondrian/tests/jenkins/preflight/preflight.sh
+      - bash mondrian/tests/jenkins/build_docker_master/build.sh $DOCKERHUB_USR $DOCKERHUB_PSW docker.io singlecellpipelinetest
   build:
     commands:
-      - bash single_cell/tests/jenkins/refdata/download.sh
-      - bash single_cell/tests/jenkins/align/align.sh singlecellpipelinetest
-      - bash single_cell/tests/jenkins/hmmcopy/hmmcopy.sh singlecellpipelinetest
-      - bash single_cell/tests/jenkins/annotation/annotation.sh singlecellpipelinetest
-      - bash single_cell/tests/jenkins/merge_cell_bams/merge_cell_bams.sh singlecellpipelinetest
-      - bash single_cell/tests/jenkins/split_wgs_bam/split_wgs_bam.sh singlecellpipelinetest
-      - bash single_cell/tests/jenkins/variant_calling/variant_calling.sh singlecellpipelinetest
-      - bash single_cell/tests/jenkins/breakpoint_calling/breakpoint_calling.sh singlecellpipelinetest
-      - bash single_cell/tests/jenkins/infer_haps/infer_haps.sh singlecellpipelinetest
-      - bash single_cell/tests/jenkins/count_haps/count_haps.sh singlecellpipelinetest
+      - bash mondrian/tests/jenkins/refdata/download.sh
+      - bash mondrian/tests/jenkins/align/align.sh singlecellpipelinetest
+      - bash mondrian/tests/jenkins/hmmcopy/hmmcopy.sh singlecellpipelinetest
+      - bash mondrian/tests/jenkins/annotation/annotation.sh singlecellpipelinetest
+      - bash mondrian/tests/jenkins/merge_cell_bams/merge_cell_bams.sh singlecellpipelinetest
+      - bash mondrian/tests/jenkins/split_wgs_bam/split_wgs_bam.sh singlecellpipelinetest
+      - bash mondrian/tests/jenkins/variant_calling/variant_calling.sh singlecellpipelinetest
+      - bash mondrian/tests/jenkins/breakpoint_calling/breakpoint_calling.sh singlecellpipelinetest
+      - bash mondrian/tests/jenkins/infer_haps/infer_haps.sh singlecellpipelinetest
+      - bash mondrian/tests/jenkins/count_haps/count_haps.sh singlecellpipelinetest
   post_build:
     commands:
-      - if [ $CODEBUILD_BUILD_SUCCEEDING = 1 ]; then bash single_cell/tests/jenkins/build_docker_master/build.sh $DOCKERHUB_USR $DOCKERHUB_PSW docker.io singlecellpipeline; fi
-      - if [ $CODEBUILD_BUILD_SUCCEEDING = 1 ]; then bash single_cell/tests/jenkins/conda_builds/build.sh; fi
+      - if [ $CODEBUILD_BUILD_SUCCEEDING = 1 ]; then bash mondrian/tests/jenkins/build_docker_master/build.sh $DOCKERHUB_USR $DOCKERHUB_PSW docker.io singlecellpipeline; fi
+      - if [ $CODEBUILD_BUILD_SUCCEEDING = 1 ]; then bash mondrian/tests/jenkins/conda_builds/build.sh; fi

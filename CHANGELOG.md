@@ -1,5 +1,10 @@
 # Change Log
 
+### v0.7.0
+
+#### Changes:
+1. rename to mondrian
+
 ### v0.6.20
 
 ### Changes:
